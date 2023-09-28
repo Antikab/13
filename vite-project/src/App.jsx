@@ -6,7 +6,7 @@ const niger = {
 	weapon: 'katana',
 	friends: [{ name: 'Big Smouk' }, { name: 'Rider' }],
 }
-
+ 
 const App = () => (
 	<>
 		<div className='niger'>

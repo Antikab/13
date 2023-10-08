@@ -1,29 +1,35 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
 import './App.css'
 
-const niger = {
-	band: 'balas',
-	weapon: 'katana',
-	friends: [{ name: 'Big Smouk' }, { name: 'Rider' }],
-}
- 
-const App = () => (
-	<>
-		<div className='niger'>
-			{niger.friends.map(({ name }) => (
-				<NigerBand grove={name} />
-			))}
-		</div>
-		<NigerBand grove={niger.band} />
-		<div>
-			{niger.friends.map(({ name }) => (
-				<NigerBand grove={name} />
-			))}
-		</div>
-		<NigerBand grove={niger.band} />
-	</>
-)
+function App() {
+  const [count, setCount] = useState(0)
 
-const NigerBand = ({ grove }) => <div>{grove}</div>
+  return (
+    <>
+      <div>
+        <a href="https://vitejs.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
+  )
+}
 
 export default App
